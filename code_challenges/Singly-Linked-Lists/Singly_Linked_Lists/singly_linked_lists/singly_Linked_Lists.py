@@ -28,9 +28,9 @@ class LinkedList:
         node = Node(value)
 
         if self.head is not None:
-            node.next = self.head
+            node.next = self.head ## (self.head) The old one
 
-        self.head = node
+        self.head = node ## (self.head) the new one
 
     def includes(self,value):
         """
@@ -67,6 +67,47 @@ class LinkedList:
 
         current.next =node 
 
+    def insert_before(self,value, newValue):
+        """
+        Insert value before specified value 
+
+        Arguments: value and newValue (we traying to insert newValue before value (if exists) )
+        """
+        
+        if self.head.value == value:
+            self.insert(newValue) 
+            return
+
+        current =self.head
+        while current is not None:
+            print(current.value)
+            if current.next.value == value:
+                print('yes')
+                node = Node(newValue)
+                node.next = current.next
+                current.next = node
+                return
+            current = current.next
+
+    def insert_Aftre(self,value, newValue):
+        """
+        Insert value after specified value 
+
+        Arguments: value and newValue (we traying to insert newValue after value (if exists) )
+        """
+        
+        current = self.head
+
+        while current is not None:
+            if current.value == value:
+                node = Node(newValue)
+                node.next = current.next
+                current.next = node
+                return
+            current = current.next
+
+
+
     def __str__(self):
         """
         Produce a string representation of the linked list.
@@ -82,3 +123,13 @@ class LinkedList:
             current = current.next
 
         return string + 'None'
+
+
+if __name__=="__main__":
+    ll = LinkedList()
+    ll.append('value012')
+    ll.append('value022')
+    ll.append('value033')
+    ll.append('value044')
+    ll.insert_before('value022','value077s')
+    print(ll)

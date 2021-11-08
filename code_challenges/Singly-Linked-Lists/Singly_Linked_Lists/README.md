@@ -3,18 +3,23 @@ linear data structures, which means that there is a sequence and an order to how
 
 ## Challenge
 
-Pass on this tests
+kth from end
+argument: a number, k, as a parameter.
+Return the node’s value that is k places from the tail of the linked list.
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-Can successfully instantiate an empty linked list
-Can properly insert into the linked list
-The head property will properly point to the first node in the linked list
-Can properly insert multiple nodes into the linked list
-Will return true when finding a value within the linked list that exists
-Will return false when searching for a value in the linked list that does not exist
-Can properly return a collection of all the values that exist in the linked list
-
+### Pass on this tests
+Where k is greater than the length of the linked list
+Where k and the length of the list are the same
+Where k is not a positive integer
+Where the linked list is of a size 1
+“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
 ## Approach & Efficiency
 Big O is O(1) constant
 
 ## API
 [The Code](singly_linked_lists/singly_Linked_Lists.py)
+
+## WhiteBord :
+
+![img](lab07.JPG)

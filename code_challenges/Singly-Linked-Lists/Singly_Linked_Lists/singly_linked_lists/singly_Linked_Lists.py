@@ -97,7 +97,6 @@ class LinkedList:
         """
         
         current = self.head
-
         while current is not None:
             if current.value == value:
                 node = Node(newValue)
@@ -106,6 +105,20 @@ class LinkedList:
                 return
             current = current.next
 
+    def kthFromEnd(self,k):
+        self.k=k
+        arr = []
+        current =self.head
+        while current is not None:
+            arr += [current.value]
+            current =current.next
+        
+        if 0 <= k <len(arr):  
+
+            kValue =arr[len(arr)-1-k]
+            return kValue
+
+        raise Exception(f"Length of The list is {len(arr)-1} Please Enter index between [0-{len(arr)-1}]")
 
 
     def __str__(self):
@@ -125,11 +138,13 @@ class LinkedList:
         return string + 'None'
 
 
+
 if __name__=="__main__":
     ll = LinkedList()
     ll.append('value012')
     ll.append('value022')
     ll.append('value033')
     ll.append('value044')
-    ll.insert_before('value022','value077s')
+    # ll.insert_before('value022','value077s')
+    print(ll.kthFromEnd(4))
     print(ll)

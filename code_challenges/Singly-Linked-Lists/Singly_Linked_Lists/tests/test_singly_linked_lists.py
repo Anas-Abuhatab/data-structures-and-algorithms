@@ -47,6 +47,16 @@ def test_insert_After():
     expexted = "{value012}->{value022}->{value077s}->{value033}->None"
     assert expexted == actual
 
+def test_kthFromEnd():
+    ll = LinkedList() 
+    ll.append('value012')
+    ll.append('value022')
+    ll.append('value033')
+    actual = ll.kthFromEnd(0)
+    expected = 'value033'
+    assert actual == expected
+
+
 @pytest.fixture
 def data():
     ll = LinkedList()

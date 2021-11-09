@@ -1,5 +1,5 @@
 from singly_linked_lists import __version__
-from singly_linked_lists.singly_Linked_Lists import LinkedList
+from singly_linked_lists.singly_Linked_Lists import LinkedList,Linkedlist02,zipLists
 import pytest
 
 def test_version():
@@ -47,6 +47,16 @@ def test_insert_After():
     expexted = "{value012}->{value022}->{value077s}->{value033}->None"
     assert expexted == actual
 
+def test_print():
+    ll = LinkedList()
+    ll.append('value012')
+    ll.append('value022')
+    ll.append('value033')
+    ll.append('value044')
+    expexcted = "{value012}->{value022}->{value033}->{value044}->None"
+    actual = ll.__str__()
+    assert actual == expexcted
+
 def test_kthFromEnd():
     ll = LinkedList() 
     ll.append('value012')
@@ -56,6 +66,22 @@ def test_kthFromEnd():
     expected = 'value033'
     assert actual == expected
 
+
+def test_zipLists():
+    ll = LinkedList() 
+    ll2 =Linkedlist02()
+    ll.append('List01 value01')
+    ll.append('List01 value02')
+    ll.append('List01 value03')
+    ll.append('List01 value04')
+
+    ll2.append('List02 value011')
+    ll2.append('List02 value022')
+    ll2.append('List02 value033')
+    ll2.append('List02 value044')
+    actual = zipLists(ll,ll2).__str__()
+    expected = '{List01 value01}->{List02 value011}->{List01 value02}->{List02 value022}->{List01 value03}->{List02 value033}->{List01 value04}->{List02 value044}->None'
+    assert actual == expected
 
 @pytest.fixture
 def data():

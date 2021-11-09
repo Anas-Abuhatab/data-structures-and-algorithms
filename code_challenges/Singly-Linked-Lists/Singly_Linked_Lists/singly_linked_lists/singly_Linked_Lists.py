@@ -1,3 +1,4 @@
+
 class Node:
 
     def __init__(self, value, next=None):
@@ -137,14 +138,80 @@ class LinkedList:
 
         return string + 'None'
 
+class Node_02:
+
+    def __init__(self, value, next = None) :
+        self.value =value
+        self.next = next
+
+class Linkedlist02:
+    
+    def __init__(self, head = None):
+        self.head =head
+
+    def append(self,value):
+        
+        node = Node_02(value)
+        if self.head == None:
+            self.head = node
+            return
+
+        current = self.head
+
+        while current.next is not None:
+            current = current.next
+
+        current.next = node
+    
+    def __str__(self):
+
+        current = self.head
+        outPut = ''
+
+        while current is not None:
+            outPut += f"{{{current.value}}}->"
+            current = current.next
+        
+        return outPut + "None"
+
+def zipLists(list1,list2):    
+    list1_current = list1.head
+    list2_current = list2.head
+
+    while list1_current and list2_current:
+        list1_next = list1_current.next
+        list2_next = list2_current.next
+
+        list1_current.next = list2_current
+        list2_current.next = list1_next
+
+        last_list1_current = list1_current.next
+
+        list1_current = list1_next
+        list2_current = list2_next
+    
+    if not list1_current and list2_current:
+        last_list1_current.next = list2_current
+
+    return list1
+
+    
+
+
 
 
 if __name__=="__main__":
     ll = LinkedList()
-    ll.append('value012')
-    ll.append('value022')
-    ll.append('value033')
-    ll.append('value044')
-    # ll.insert_before('value022','value077s')
-    print(ll.kthFromEnd(4))
-    print(ll)
+    ll2 =Linkedlist02()
+    ll.append('List01 value01')
+    ll.append('List01 value02')
+    ll.append('List01 value03')
+    ll.append('List01 value04')
+
+    ll2.append('List02 value011')
+    ll2.append('List02 value022')
+    ll2.append('List02 value033')
+    ll2.append('List02 value044')
+
+    print(zipLists(ll,ll2))
+  

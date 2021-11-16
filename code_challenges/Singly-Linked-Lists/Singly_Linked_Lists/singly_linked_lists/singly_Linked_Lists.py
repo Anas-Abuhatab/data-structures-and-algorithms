@@ -83,7 +83,6 @@ class LinkedList:
         while current is not None:
             print(current.value)
             if current.next.value == value:
-                print('yes')
                 node = Node(newValue)
                 node.next = current.next
                 current.next = node
@@ -196,7 +195,81 @@ def zipLists(list1,list2):
     return list1
 
     
-
+# Python3 program to check if linked
+# list is palindrome using stack
+class NodeRe:
+    def __init__(self,data):
+         
+        self.data = data
+        self.ptr = None
+         
+# Function to check if the linked list
+# is palindrome or not
+def ispalindrome(head):
+     
+    # Temp pointer
+    slow = head
+ 
+    # Declare a stack
+    stack = []
+     
+    ispalin = True
+ 
+    # Push all elements of the list
+    # to the stack
+    while slow != None:
+        stack.append(slow.data)
+         
+        # Move ahead
+        slow = slow.ptr
+ 
+    # Iterate in the list again and
+    # check by popping from the stack
+    while head != None:
+ 
+        # Get the top most element
+        i = stack.pop()
+         
+        # Check if data is not
+        # same as popped element
+        if head.data == i:
+            ispalin = True
+        else:
+            ispalin = False
+            break
+ 
+        # Move ahead
+        head = head.ptr
+         
+    return ispalin
+ 
+# Driver Code
+ 
+# Addition of linked list
+one = NodeRe(1)
+two = NodeRe(2)
+three = NodeRe(3)
+four = NodeRe(4)
+five = NodeRe(3)
+six = NodeRe(2)
+seven = NodeRe(1)
+ 
+# Initialize the next pointer
+# of every current pointer
+one.ptr = two
+two.ptr = three
+three.ptr = four
+four.ptr = five
+five.ptr = six
+six.ptr = seven
+seven.ptr = NodeRe
+ 
+# Call function to check palindrome or not
+result = ispalindrome(one)
+ 
+print("isPalindrome:", result)
+ 
+# This code is contributed by Nishtha Goel
 
 
 
@@ -213,5 +286,8 @@ if __name__=="__main__":
     ll2.append('List02 value033')
     ll2.append('List02 value044')
 
-    print(zipLists(ll,ll2))
+    # print(zipLists(ll,ll2))
+    reversr =NodeRe()
+    result = ispalindrome(one)
+
   

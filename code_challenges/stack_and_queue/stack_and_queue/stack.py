@@ -1,9 +1,7 @@
 from stack_and_queue.node import Node
 
-
 class EmptyStack(Exception):
     pass
-
 
 class Stack:
     """
@@ -46,3 +44,5 @@ class Stack:
 
     def is_empty(self):
         return self.top == None
+
+ 

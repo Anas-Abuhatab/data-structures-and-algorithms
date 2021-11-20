@@ -145,8 +145,9 @@ class Node_02:
 
 class Linkedlist02:
     
-    def __init__(self, head = None):
+    def __init__(self, head = None ):
         self.head =head
+        self.max = 0
 
     def append(self,value):
         
@@ -173,6 +174,29 @@ class Linkedlist02:
         
         return outPut + "None"
 
+
+
+
+    def Max_Stack(self):
+        if self.head == None:
+            raise Exception("This stack is empty")
+        current  = self.head
+        while current.next is not None:
+            if current.next.value > self.max:
+                self.max = current.next.value
+            current = current.next
+        return self.max
+
+
+
+
+
+
+
+
+
+
+
 def zipLists(list1,list2):    
     list1_current = list1.head
     list2_current = list2.head
@@ -195,81 +219,7 @@ def zipLists(list1,list2):
     return list1
 
     
-# Python3 program to check if linked
-# list is palindrome using stack
-class NodeRe:
-    def __init__(self,data):
-         
-        self.data = data
-        self.ptr = None
-         
-# Function to check if the linked list
-# is palindrome or not
-def ispalindrome(head):
-     
-    # Temp pointer
-    slow = head
- 
-    # Declare a stack
-    stack = []
-     
-    ispalin = True
- 
-    # Push all elements of the list
-    # to the stack
-    while slow != None:
-        stack.append(slow.data)
-         
-        # Move ahead
-        slow = slow.ptr
- 
-    # Iterate in the list again and
-    # check by popping from the stack
-    while head != None:
- 
-        # Get the top most element
-        i = stack.pop()
-         
-        # Check if data is not
-        # same as popped element
-        if head.data == i:
-            ispalin = True
-        else:
-            ispalin = False
-            break
- 
-        # Move ahead
-        head = head.ptr
-         
-    return ispalin
- 
-# Driver Code
- 
-# Addition of linked list
-one = NodeRe(1)
-two = NodeRe(2)
-three = NodeRe(3)
-four = NodeRe(4)
-five = NodeRe(3)
-six = NodeRe(2)
-seven = NodeRe(1)
- 
-# Initialize the next pointer
-# of every current pointer
-one.ptr = two
-two.ptr = three
-three.ptr = four
-four.ptr = five
-five.ptr = six
-six.ptr = seven
-seven.ptr = NodeRe
- 
-# Call function to check palindrome or not
-result = ispalindrome(one)
- 
-print("isPalindrome:", result)
- 
-# This code is contributed by Nishtha Goel
+
 
 
 
@@ -281,13 +231,13 @@ if __name__=="__main__":
     ll.append('List01 value03')
     ll.append('List01 value04')
 
-    ll2.append('List02 value011')
-    ll2.append('List02 value022')
-    ll2.append('List02 value033')
-    ll2.append('List02 value044')
+    ll2.append(33)
+    ll2.append(1)
+    ll2.append(66)
+    ll2.append(76)
+    ll2.append(11)
 
-    # print(zipLists(ll,ll2))
-    reversr =NodeRe()
-    result = ispalindrome(one)
+    print(ll2.Max_Stack())
+
 
   

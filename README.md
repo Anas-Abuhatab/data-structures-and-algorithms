@@ -13,8 +13,10 @@ Singly Linked Lists|[Go](code_challenges/Singly-Linked-Lists/Singly_Linked_Lists
 linked-list-insertions|[Go](code_challenges/Singly-Linked-Lists/Singly_Linked_Lists/READMELAB06.md)
 linked-list-kth|[Go](code_challenges/Singly-Linked-Lists/Singly_Linked_Lists/READMELAB07.md)
 linked-list-zip|[Go](code_challenges/Singly-Linked-Lists/Singly_Linked_Lists/READMELAB08.md)
-stack-and-queue|[Go](code_challenges/stack-and-queue/README.md)
+stack-and-queue|[Go](/code_challenges/stack-and-queue/README.md)
 stack-queue-pseudo|[Go](code_challenges/stack-queue-pseudo/README.md)
 stack-queue-animal-shelter|[Go](code_challenges/stack-queue-animal-shelter/README.md)
 stack-queue-brackets|[Go](code_challenges/stack-queue-brackets/README.md)
+Trees|[Go](code_challenges/trees/README.md)
+
 

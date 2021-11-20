@@ -1,3 +1,9 @@
+from collections import deque
+
+class Stack:
+    def __init__(self) -> None:
+        self.storage = deque()
+
 def validate_brackets(string):
     stack = []
     open_and_close = {'{':'}','[':']','(':')'}

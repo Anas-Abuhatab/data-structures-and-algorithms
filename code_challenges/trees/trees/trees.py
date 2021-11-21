@@ -33,15 +33,25 @@ class Binary_Tree:
         return traverse
 
     def post_order(self):
-        result =[]
+        result = []
         def traverse(root):
-            if root.left:
+            result.append(root.value)
+            if root.left is not None:
                 traverse(root.left)
-            if root.right:
+            if root.right is not None:
                 traverse(root.right)
-                result.append(root.value)
-            
             return result
+        return traverse
+
+    def tree_max(self):
+        result = []
+        def traverse(root):
+            result.append(root.value)
+            if root.left is not None:
+                traverse(root.left)
+            if root.right is not None:
+                traverse(root.right)
+            return max(result)
         return traverse
 
 class BinarySearchTree(Binary_Tree):

@@ -6,6 +6,30 @@ import pytest
 def test_version():
     assert __version__ == '0.1.0'
 
+def test_empty_tree():
+    tree = Binary_Tree()
+    assert tree.root == None
+
+def test_single_root_tree():
+    tree = Binary_Tree()
+    root_node = Node(25)
+    tree.root = root_node
+    assert tree.root == root_node
+
+def test_left_right_child_tree():
+    tree = Binary_Tree()
+    one = Node(25)
+    two = Node(12)
+    three = Node(30)
+    tree.root = one
+    one.left = two
+    one.right = three
+    actualL = one.left.value
+    expectedL = 12
+    assert actualL == expectedL
+    actualR = one.right.value
+    expectedR = 30
+    assert actualR == expectedR
 
 
 def test_pre_order(create_tree):

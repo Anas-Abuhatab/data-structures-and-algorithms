@@ -47,20 +47,9 @@ def test_in_order(create_tree):
 def test_post_order(create_tree):
     traverse = create_tree.post_order()
     actual = traverse(create_tree.root)
-    excepted = ['B', 'A']
+    excepted = ['A', 'B', 'D', 'E', 'C', 'F']
     assert actual == excepted
 
-
-@pytest.fixture
-def create_tree():
-    tree=Binary_Tree()
-    tree.root=Node("A")
-    tree.root.left=Node("B")
-    tree.root.right=Node("C")
-    tree.root.left.left=Node("D")
-    tree.root.left.right=Node("E")
-    tree.root.right.left=Node("F")
-    return tree
 
 
 def test_add_bts(test_bts):
@@ -73,6 +62,18 @@ def test_contains(test_bts):
     assert test_bts.contains(23) == True
     assert test_bts.contains(4 )== True
     assert test_bts.contains(85) == True
+
+
+@pytest.fixture
+def create_tree():
+    tree=Binary_Tree()
+    tree.root=Node("A")
+    tree.root.left=Node("B")
+    tree.root.right=Node("C")
+    tree.root.left.left=Node("D")
+    tree.root.left.right=Node("E")
+    tree.root.right.left=Node("F")
+    return tree
 
 
 @pytest.fixture
@@ -94,3 +95,24 @@ def test_bts():
    return bts
 
 
+@pytest.fixture
+def binary_tree():
+    bt = Binary_Tree()
+    root = bt.root = Node(2)
+    seven = root.left = Node(7)
+    five = root.right = Node(5)
+    seven.left = Node(2)
+    six = seven.right = Node(6)
+    nine = five.right = Node(9)
+    nine.left = Node(4)
+    six.right = Node(11)
+    six.left =Node(5)
+    return bt
+
+
+
+def test_tree_max(binary_tree):
+    traverse = binary_tree.tree_max()
+    actual = traverse(binary_tree.root)
+    expected = 11
+    assert actual == expected

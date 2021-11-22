@@ -44,15 +44,16 @@ class Binary_Tree:
         return traverse
 
     def tree_max(self):
-        result = []
-        def traverse(root):
-            result.append(root.value)
-            if root.left is not None:
-                traverse(root.left)
-            if root.right is not None:
-                traverse(root.right)
-            return max(result)
-        return traverse
+        max_value = self.root.value
+        def traverse(node):
+            nonlocal max_value
+            max_value = node.value if node.value > max_value  else max_value
+            if node.left is not None:
+                traverse(node.left)
+            if node.right is not None:
+                traverse(node.right)
+        traverse(self.root)
+        return max_value
 
 class BinarySearchTree(Binary_Tree):
     def add(self, value):

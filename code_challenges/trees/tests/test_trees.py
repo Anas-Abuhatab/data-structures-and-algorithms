@@ -112,7 +112,6 @@ def binary_tree():
 
 
 def test_tree_max(binary_tree):
-    traverse = binary_tree.tree_max()
-    actual = traverse(binary_tree.root)
+    actual = binary_tree.tree_max()
     expected = 11
     assert actual == expected

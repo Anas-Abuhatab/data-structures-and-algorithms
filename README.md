@@ -19,6 +19,8 @@ stack-queue-animal-shelter|[Go](code_challenges/stack-queue-animal-shelter/READM
 stack-queue-brackets|[Go](code_challenges/stack-queue-brackets/README.md)
 Trees|[Go](code_challenges/trees/README.md)
 Tree-max|[Go](code_challenges/tree-max/README.md)
+Tree-max|[Go](code_challenges/tree-breadth-first/README.md)
+
 
 
 

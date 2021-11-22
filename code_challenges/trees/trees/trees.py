@@ -1,3 +1,6 @@
+from queue import Queue
+
+###############################################
 class Node:
     def __init__(self, value = None):
         self.value = value
@@ -55,6 +58,22 @@ class Binary_Tree:
         traverse(self.root)
         return max_value
 
+    def breadth_first(tree):
+        queue=[]
+        output=[]
+        if tree.root:
+            queue.append(tree.root) 
+            while queue:
+                    node = queue.pop(0)
+                    output.append(node.value)
+                    if node.left is not None:
+                        queue.append(node.left)
+                    if node.right is not None:
+                        queue.append(node.right)
+            return output
+        else:
+            return 'the tree is empty '
+
 class BinarySearchTree(Binary_Tree):
     def add(self, value):
         node = Node(value)
@@ -84,5 +103,10 @@ class BinarySearchTree(Binary_Tree):
             elif value > current.value:
                 current = current.right
         return False
+
+
+
+
+
 
 

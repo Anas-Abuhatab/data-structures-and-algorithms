@@ -115,3 +115,8 @@ def test_tree_max(binary_tree):
     actual = binary_tree.tree_max()
     expected = 11
     assert actual == expected
+
+def test_breadth_first(binary_tree):
+    actual = binary_tree.breadth_first()
+    expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
+    assert actual == expected

@@ -1,5 +1,4 @@
-from queue import Queue
-
+from code_challenges.trees.trees.qqueue import Queue
 ###############################################
 class Node:
     def __init__(self, value = None):
@@ -103,10 +102,4 @@ class BinarySearchTree(Binary_Tree):
             elif value > current.value:
                 current = current.right
         return False
-
-
-
-
-
-
 

@@ -1,4 +1,4 @@
-from node import Node
+from q_node import Node
 
 class EmptyStack(Exception):
     pass

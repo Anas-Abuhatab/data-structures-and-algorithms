@@ -21,7 +21,7 @@ Trees|[Go](code_challenges/trees/README.md)
 Tree-max|[Go](code_challenges/tree-max/README.md)
 Tree-max|[Go](code_challenges/tree-breadth-first/README.md)
 tree-fizz-buzz|[Go](code_challenges/tree-fizz-buzz/README.md)
-Insertion Sort|[Go](code_challenges/Insertion_Sort/BLOG.md)
+Insertion Sort|[Go](code_challenges/insertion_sort_pro/BLOG.md)
 
 
 

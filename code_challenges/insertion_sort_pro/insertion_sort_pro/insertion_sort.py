@@ -8,7 +8,5 @@ def insertion_sort(arr):
             j -= 1
         arr[j + 1] = value_at_i
         
-    return print(arr)
+    return arr
 
-
-insertion_sort([5, 7, 4, 6, 2, 9, 3, 8]) #2,3,4,5,6,7,8,9

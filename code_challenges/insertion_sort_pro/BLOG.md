@@ -66,6 +66,9 @@ Index:           0  1   2   3    4    5
 - Space: O(1)
     - The array is being sorted in place. Therefore, no additional space is being utilized. 
 
+### Test
+[Test Link](/code_challenges/insertion_sort_pro/tests/test_insertion_sort_pro.py)
+
 ### WhiteBoard
 
-![](/code_challenges/Insertion_Sort/lab26.JPG)
+![](/code_challenges/insertion_sort_pro/lab26.JPG)

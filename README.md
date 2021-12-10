@@ -24,6 +24,8 @@ tree-fizz-buzz|[Go](code_challenges/tree-fizz-buzz/README.md)
 Insertion Sort|[Go](code_challenges/insertion_sort_pro/BLOG.md)
 Merge Sort|[Go](code_challenges/merge_sort/BLOG.md)
 Quick Sort|[Go](code_challenges/Quick_Sort/BLOG.md)
+Hash Tables|[Go](code_challenges/hash_tables/README.md)
+
 
 
 

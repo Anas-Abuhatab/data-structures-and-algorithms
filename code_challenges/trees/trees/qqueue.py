@@ -27,7 +27,7 @@ class Queue:
             raise EmptyStack("This stack is empty")
         else:
             temp = self.front
-            self.front == self.front.next
+            self.front = self.front.next
             return temp.value
     
     def peek(self):

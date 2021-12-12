@@ -1,6 +1,5 @@
 from hash_tables import __version__
-from hash_tables.linked_list_for_hash import Node, LinkedList
-from hash_tables.hash_tables import Hashtable
+from ..hash_tables.hash_tables import Hashtable
 
 def test_version():
     assert __version__ == '0.1.0'

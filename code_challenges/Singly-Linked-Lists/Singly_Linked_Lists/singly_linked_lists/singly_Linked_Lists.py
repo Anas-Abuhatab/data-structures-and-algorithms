@@ -192,11 +192,6 @@ class Linkedlist02:
 
 
 
-
-
-
-
-
 def zipLists(list1,list2):    
     list1_current = list1.head
     list2_current = list2.head
@@ -213,8 +208,17 @@ def zipLists(list1,list2):
         list1_current = list1_next
         list2_current = list2_next
     
-    if not list1_current and list2_current:
-        last_list1_current.next = list2_current
+    if not (list1_current and list2_current):
+        try:
+            last_list1_current.next = list2_current
+            pass
+        except:
+            if list1_current:
+                return list1
+            elif list2_current:
+                return list2
+            else:
+                return print("the lists is empty")
 
     return list1
 
@@ -237,7 +241,9 @@ if __name__=="__main__":
     ll2.append(76)
     ll2.append(11)
 
-    print(ll2.Max_Stack())
+    print(zipLists(ll,ll2))
+
+    # print(ll2.Max_Stack())
 
 
   

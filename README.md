@@ -26,6 +26,8 @@ Merge Sort|[Go](code_challenges/merge_sort/BLOG.md)
 Quick Sort|[Go](code_challenges/Quick_Sort/BLOG.md)
 Hash Tables|[Go](code_challenges/hash_tables/README.md)
 hashmap-repeated-word|[Go](code_challenges/repeated_word/README.md)
+tree-intersection|[Go](code_challenges/repeated_word/README.md)
+
 
 
 

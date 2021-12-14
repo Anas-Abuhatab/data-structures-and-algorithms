@@ -1,4 +1,4 @@
-from linked_list_for_hash import Node, LinkedList
+from hash_tables.linked_list_for_hash import LinkedList
 
 class Hashtable:
     def __init__(self, size=1024):

@@ -28,7 +28,7 @@ class Graph:
 
     def __str__(self):
         return str(self._adjacency_list)
-    
+
 class Vertex:
     def __init__(self, value):
         self.value = value
